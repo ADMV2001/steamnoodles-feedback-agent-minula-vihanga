@@ -47,7 +47,7 @@ Follow these steps to get the project running on your local machine.
       python -m venv venv
       venv\Scripts\activate
 
-  # if can not activate, run this and activate after that
+if can not activate, run this and activate after that
     
       Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
 
