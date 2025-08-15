@@ -37,7 +37,7 @@ Follow these steps to get the project running on your local machine.
 
 1. Clone the Repository
    
-       git clone [GitHub Link]
+       git clone https://github.com/ADMV2001/steamnoodles-feedback-agent-minula-vihanga.git
 
 2. Create a Virtual Environment
   It's highly recommended to use a virtual environment to manage project dependencies.
