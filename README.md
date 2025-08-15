@@ -37,34 +37,34 @@ Sentiment Visualization Agent: This agent generates plots of sentiment trends ov
 Follow these steps to get the project running on your local machine.
 
 # Prerequisites
-  Python 3.8 or newer
-  Git
+      Python 3.8 or newer
+      Git
 
 1. Clone the Repository
    
-   git clone [GitHub Link]
+       git clone [GitHub Link]
 
 2. Create a Virtual Environment
   It's highly recommended to use a virtual environment to manage project dependencies.
 
   For Windows:
     
-  python -m venv venv
-  venv\Scripts\activate
+      python -m venv venv
+      venv\Scripts\activate
 
   # if can not activate, run this and activate after that
     
-  Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+      Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
 
   For macOS/Linux:
     
-  python3 -m venv venv
-  source venv/bin/activate
+      python3 -m venv venv
+      source venv/bin/activate
 
 3. Install Dependencies
   Install all the required Python libraries from the requirements.txt file.
 
-  pip install -r requirements.txt
+      pip install -r requirements.txt
 
 (Note: If a requirements.txt file is not provided, you can install the packages manually: pip install python-dotenv pandas seaborn matplotlib groq langgraph kaggle)
 
@@ -74,7 +74,7 @@ Follow these steps to get the project running on your local machine.
 
    Add your Groq API key to the file like this:
 
-  GROQ_API_KEY="your_actual_api_key_here"
+          GROQ_API_KEY="your_actual_api_key_here"
 
 5. Kaggle API Credentials
   The script will automatically download the required dataset from Kaggle. To do this, you need to have your Kaggle API credentials set up.
@@ -83,8 +83,8 @@ Follow these steps to get the project running on your local machine.
   Go to Account -> API -> Create New API Token. This will download a kaggle.json file.
   Place this kaggle.json file in the appropriate directory:
 
-  Windows: C:\Users\<Your-Username>\.kaggle\
-  macOS/Linux: ~/.kaggle/
+      Windows: C:\Users\<Your-Username>\.kaggle\
+      macOS/Linux: ~/.kaggle/
 
 # Dataset
 
@@ -94,7 +94,7 @@ The dataset is downloaded automatically when the script is first run. Please ens
 # Instructions to Test Both Agents
 Once the setup is complete, you can run the main script from your terminal.
 
-python feedback_agent.py
+    python feedback_agent.py
 
 The script will first ensure the dataset is downloaded and then present you with a prompt to interact with the agents.
 
@@ -103,28 +103,28 @@ This agent is designed to handle customer reviews. Type a review and press Enter
 
 * Example Prompts:
 
-For a positive review:
-The food was absolutely wonderful, and the service was even better!
+        For a positive review:
+        The food was absolutely wonderful, and the service was even better!
 
-For a negative review:
-I was very disappointed with my meal. The pasta was cold and the waiter was rude.
+        For a negative review:
+        I was very disappointed with my meal. The pasta was cold and the waiter was rude.
 
-For a neutral or mixed review:
-The ambiance was nice, but the portion sizes were a bit small for the price.
+        For a neutral or mixed review:
+        The ambiance was nice, but the portion sizes were a bit small for the price.
 
 # Agent 2: Testing the Sentiment Visualization Agent
 This agent is designed to understand requests for plots and charts over a specific time period.
 
 * Example Prompts:
 
-For a specific date range:
-plot a graph from 2022 june 25 to july 25
+        For a specific date range:
+        plot a graph from 2022 june 25 to july 25
 
-For a more general request:
-show me the sentiment data for the first week of august 2022
+        For a more general request:
+        show me the sentiment data for the first week of august 2022
 
-For a vague request (will use a default date range):
-can you plot a chart for me?
+        For a vague request (will use a default date range):
+        can you plot a chart for me?
 
 ▶ Expected Output:
 After running a plot command, the agent will perform the analysis and save a .png file. The output in the terminal will look like this:
