@@ -1,0 +1,9 @@
+langchain
+langgraph
+groq
+pandas
+matplotlib
+seaborn
+plotly
+kaggle
+python-dotenv
