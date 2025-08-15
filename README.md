@@ -16,21 +16,16 @@ Router Agent: This is the entry point for all user requests. It uses the Groq LL
 
 Feedback Response Agent: This agent handles individual customer reviews. It performs a two-step process:
 
-->First, it asks the LLM to classify the sentiment of the review as Positive, Negative, or Neutral.
-
-->Second, using the original review and the determined sentiment, it prompts the LLM again to generate a short, polite, and context-aware reply suitable for a customer service representative.
+    ->First, it asks the LLM to classify the sentiment of the review as Positive, Negative, or Neutral.
+    ->Second, using the original review and the determined sentiment, it prompts the LLM again to generate a short, polite, and context-aware reply suitable for a customer service representative.
 
 Sentiment Visualization Agent: This agent generates plots of sentiment trends over time.
 
-->It uses the LLM to extract a start and end date from the user's natural language request.
-
-->It then uses the Pandas library to load and filter the Yelp restaurant review dataset from Kaggle.
-
-->For the reviews within the specified date range, it performs on-the-fly sentiment analysis.
-
-->Finally, it uses Seaborn and Matplotlib to create a bar chart of the sentiment counts per day and saves it as a .png image in the outputs directory.
-
-->The entire system is powered by the Groq API, which provides extremely fast inference speeds, making the agent's responses feel instantaneous.
+    ->It uses the LLM to extract a start and end date from the user's natural language request.
+    ->It then uses the Pandas library to load and filter the Yelp restaurant review dataset from Kaggle.
+    ->For the reviews within the specified date range, it performs on-the-fly sentiment analysis.
+    ->Finally, it uses Seaborn and Matplotlib to create a bar chart of the sentiment counts per day and saves it as a .png image in the outputs directory.
+    ->The entire system is powered by the Groq API, which provides extremely fast inference speeds, making the agent's responses feel instantaneous.
 
 
 # Setup and Installation:
@@ -64,7 +59,7 @@ Follow these steps to get the project running on your local machine.
 3. Install Dependencies
   Install all the required Python libraries from the requirements.txt file.
 
-      pip install -r requirements.txt
+          pip install -r requirements.txt
 
 (Note: If a requirements.txt file is not provided, you can install the packages manually: pip install python-dotenv pandas seaborn matplotlib groq langgraph kaggle)
 
